@@ -1,0 +1,30 @@
+HackerEarth Wine Shop
+***NOTE***
+-below all detail avalible in /hackerearth/media/instructio.txt
+
+**----Feature----**
+-Upload .csv file
+-Sorting based on country, province, regions.
+-Sorting based on each and every column.
+-Display all data with pagination.
+-Signup and Login/Logout functionality.
+
+**----REQUIREMENTS----**
+    -python -  3.7.2 ,Django FrameWork - 2.1.7  and MySql database
+
+ **----STEP TO RUN PROJECT----**
+-Unzip the HackerEarth_wineshop.zip file
+-in settings file must change databse detail with your deatail.
+-In manage.py file  directory run below command
+-$python manage.py makemigrations
+-$python manage.py migrate
+-$python manage.py runserver
+-In browser run with url.
+-Create new user using signup button which display on first page on browser.
+-username and password are credantial for login must remember.
+-login using username and password.
+-Upload abc.csv file which you provided me ,using Upload link on navigation bar
+-Its take time based on csv file data upload to all data to database so,after few time refresh the page so all data is display with pagination
+-using links filter country, province, regions_1 and region_2 you see the filter data on on browser screen
+-Just click on column name you get sorted data based on column clicked.
+-logout link logout the user and redirect to login page

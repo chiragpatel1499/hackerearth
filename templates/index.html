@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <title></title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="/display_data">Wine Shop</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/login/profile/">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/display_data">Display</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/wine/file_request/">Upload</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/login/logout/">Log Out</a>
+            </li>
+        </ul>
+    </nav>
+    <form method="POST" action="/wine/upload_file/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <div class="card-body text-center">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h4 class="card-title">Wine Shop</h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p class="card-text">Upload a csv file.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="file" name="myfile" class="btn-primary" required /><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><button type="submit" class="btn btn-primary ">Upload</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </form>
+</body>
+
+</html>
